@@ -42,6 +42,7 @@ export const H1 = styled.h1 `
 export const DivInput = styled.div ``;
 
 export const InputLabel = styled.p `
+    margin-left: 10px;
     color: #EAE7E9;
     font-weight: 600;
     font-size: 18px;
@@ -49,7 +50,7 @@ export const InputLabel = styled.p `
 
 export const Input = styled.input `
     font-size: 24px;
-    font-weight: 400;
+    font-weight: 500;
     padding: 7px;
     border-radius: 10px;
     border: none;
@@ -80,6 +81,4 @@ export const Button = styled.button `
     cursor: pointer;
 `;
 
-export const ArrowImg = styled.img `
-
-`;
+export const ArrowImg = styled.img ``;

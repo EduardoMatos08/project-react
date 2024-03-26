@@ -12,10 +12,10 @@ export const Container = styled.div `
     gap: 40px;
 `;
 
-export const Image = styled.img `
-    margin-top: 30px;
+export const MainImage = styled.img `
+    margin-top: 17px;
     height: auto;
-    width: 90vw;
+    width: 30vw;
 `;
 
 export const ContainerItems = styled.div `
@@ -26,9 +26,9 @@ export const ContainerItems = styled.div `
     align-items: center;
     border-radius: 61px 61px 0 0;
     background: linear-gradient(157.44deg, rgba(255, 255, 255, 0.6) 0.85%, rgba(255, 255, 255, 0.15) 100%);
-    padding: 50px 36px;
+    padding: 40px 36px;
     height: 60vh;
-    width: 100vw;
+    width: 50vw;
 `;
 
 export const H1 = styled.h1 `
@@ -36,16 +36,14 @@ export const H1 = styled.h1 `
     font-weight: 700;
     text-align: center;
     color: #EAE7E9;
-    margin-bottom: 80px;
+    margin: 10px 0 40px 0;
 `;
 
-export const DivInput = styled.div `
-
-`;
+export const DivInput = styled.div ``;
 
 export const InputLabel = styled.p `
     color: #EAE7E9;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 18px;
 `;
 
@@ -60,15 +58,28 @@ export const Input = styled.input `
     box-shadow: #00000040 0 4px 0;
     margin-bottom: 20px;
     outline: none;
+    width: 25vw;
 `;
 
 export const Button = styled.button `
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
     color: #fff;
     background-color: #000000CC;
-    font-size: 17px;
+    font-size: 22px;
     font-weight: 700;
+    height: 7vh;
+    width: 15vw;
+    border: none;
+    border-radius: 25px;
+    box-shadow: #00000050 0 4px 0;
+    cursor: pointer;
 `;
 
-export const ArrowImage = styled.img `
+export const ArrowImg = styled.img `
 
 `;

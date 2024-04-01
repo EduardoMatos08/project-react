@@ -60,6 +60,7 @@ export const Input = styled.input `
     margin-bottom: 20px;
     outline: none;
     width: 25vw;
+    text-shadow: #00000040 2px 2px 3px;
 `;
 
 export const Button = styled.button `

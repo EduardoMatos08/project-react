@@ -2,6 +2,8 @@ import React from 'react';
 
 import People from './assets/people.svg'
 import ArrowRight from './assets/arrow-right.svg'
+import ArrowLeft from './assets/arrow-left.svg'
+import TrashCan from './assets/trash-can.svg'
 import {
   Container,
   MainImage,
@@ -11,10 +13,22 @@ import {
   Input,
   Button,
   DivInput,
-  ArrowImg
+  ArrowImg,
+  UserBox,
+  UserInfo,
+  TrashCanButton,
+  TrashCanImg,
+  ButtonBack,
+  ArrowLImg
 } from './styles.js';
 
 export default function App() {
+
+  const users = [
+    { id: Math.random(), name: "Eduardo", age: 15 },
+    { id: Math.random(), name: "Nadia", age: 39 },
+
+  ]
 
   return(
     <Container>
@@ -25,15 +39,23 @@ export default function App() {
 
         <DivInput>
           <InputLabel>Nome</InputLabel>
-          <Input placeholder='Nome completo...'></Input>
+          <Input placeholder='Nome completo...' type="text"></Input>
         </DivInput>
 
         <DivInput>
           <InputLabel>Idade</InputLabel>
-          <Input placeholder='Idade...'></Input>
+          <Input placeholder='Idade...' type="number"></Input>
         </DivInput>
 
         <Button>Cadastrar<ArrowImg alt="seta-para-direita" src={ArrowRight}></ArrowImg></Button>
+
+        <ul>
+          {users.map((user) => (
+            <UserBox key={user.id}><UserInfo>{user.name}</UserInfo> <UserInfo>{user.age} Anos</UserInfo><TrashCanButton><TrashCanImg alt="trash-can" src={TrashCan}></TrashCanImg></TrashCanButton></UserBox>
+          ))}
+        </ul>
+        <ButtonBack>Voltar<ArrowLImg alt="seta-para-esquerda" src={ArrowLeft}></ArrowLImg></ButtonBack>
+        
       </ContainerItems>
     </Container>
   )

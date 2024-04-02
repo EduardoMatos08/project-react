@@ -27,7 +27,7 @@ export const ContainerItems = styled.div `
     border-radius: 61px 61px 0 0;
     background: linear-gradient(157.44deg, rgba(255, 255, 255, 0.6) 0.85%, rgba(255, 255, 255, 0.15) 100%);
     padding: 40px 36px;
-    height: 60vh;
+    height: 60%;
     width: 50vw;
 `;
 
@@ -50,7 +50,7 @@ export const InputLabel = styled.p `
 
 export const Input = styled.input `
     font-size: 24px;
-    font-weight: 500;
+    font-weight: 400;
     padding: 7px;
     border-radius: 10px;
     border: none;
@@ -60,7 +60,10 @@ export const Input = styled.input `
     margin-bottom: 20px;
     outline: none;
     width: 25vw;
-    text-shadow: #00000040 2px 2px 3px;
+
+    &::-webkit-inner-spin-button { 
+        -webkit-appearance: none;
+    }
 `;
 
 export const Button = styled.button `
@@ -69,17 +72,82 @@ export const Button = styled.button `
     justify-content: center;
     align-items: center;
     gap: 20px;
-    margin-top: 20px;
+    margin: 20px 0 20px 0;
     color: #fff;
     background-color: #000000CC;
     font-size: 22px;
     font-weight: 700;
-    height: 7vh;
-    width: 15vw;
+    height: 50px;
+    width: 200px;
     border: none;
     border-radius: 25px;
     box-shadow: #00000050 0 4px 0;
     cursor: pointer;
+    transition: transform 0.1s ease-in-out,  background-color 0.2s ease-in-out;
+
+    &:hover {
+        background-color: #FFFFFF40;
+    }
+    &:active {
+        transform: scale(0.9);
+    }
 `;
 
 export const ArrowImg = styled.img ``;
+
+export const UserBox = styled.div `
+    display: flex;
+    font-size: 24px;
+    font-weight: 400;
+    border-radius: 10px;
+    border: solid 2px #fff;
+    background: none;
+    color: #EAE7E9;
+    box-shadow: #00000040 0 4px 0;
+    margin-bottom: 20px;
+    height: 50px;
+    width: 25vw;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+`;
+
+export const UserInfo = styled.p ``;
+
+export const TrashCanButton = styled.button `
+    border: none;
+    background: none;
+    cursor: pointer;
+`;
+
+export const TrashCanImg = styled.img ``;
+
+export const ButtonBack = styled.button `
+    display: flex;
+    font-size: 24px;
+    font-weight: 400;
+    border: solid 2px #fff;
+    border-radius: 25px;
+    background: none;
+    color: #EAE7E9;
+    box-shadow: #00000040 0 4px 0;
+    margin-bottom: 20px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    cursor: pointer;
+    height: 50px;
+    width: 200px;
+    transition: transform 0.1s ease-in-out, background-color 0.2s ease-in-out, border 0.2s ease-in-out;
+
+    &:hover {
+        background-color: #000000;
+        border: none;
+    }
+    &:active {
+        transform: scale(0.9);
+    }
+`;
+
+export const ArrowLImg = styled.img ``;

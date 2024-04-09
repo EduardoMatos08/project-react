@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState, useRef } from 'react';
 
 import People from './assets/people.svg'
 import ArrowRight from './assets/arrow-right.svg'
@@ -24,11 +25,23 @@ import {
 
 export default function App() {
 
-  const users = [
-    { id: Math.random(), name: "Eduardo", age: 15 },
-    { id: Math.random(), name: "Nadia", age: 39 },
+  const [users, setUsers] = useState([]);
 
-  ]
+  const inputName = useRef()
+  const inputAge = useRef()
+
+  // Hooks - UseState - UseRef
+
+  function addUser() {
+    setUsers([...users, {id: Math.random(), name: inputName.current.value, age: inputAge.current.value}])
+  }
+
+  // Estado == Monitora a Alteração de Variável == Imutável //
+
+  function deleteUser(UserId) {
+    const newUsers = users.filter(user => user.id !== UserId)
+    setUsers(newUsers)
+  }
 
   return(
     <Container>
@@ -39,19 +52,19 @@ export default function App() {
 
         <DivInput>
           <InputLabel>Nome</InputLabel>
-          <Input placeholder='Nome completo...' type="text"></Input>
+          <Input ref={inputName} placeholder='Nome completo...' type="text"></Input>
         </DivInput>
 
         <DivInput>
           <InputLabel>Idade</InputLabel>
-          <Input placeholder='Idade...' type="number"></Input>
+          <Input ref={inputAge} placeholder='Idade...' type="number"></Input>
         </DivInput>
 
-        <Button>Cadastrar<ArrowImg alt="seta-para-direita" src={ArrowRight}></ArrowImg></Button>
+        <Button onClick={addUser}>Cadastrar<ArrowImg alt="seta-para-direita" src={ArrowRight}></ArrowImg></Button>
 
         <ul>
           {users.map((user) => (
-            <UserBox key={user.id}><UserInfo>{user.name}</UserInfo> <UserInfo>{user.age} Anos</UserInfo><TrashCanButton><TrashCanImg alt="trash-can" src={TrashCan}></TrashCanImg></TrashCanButton></UserBox>
+            <UserBox key={user.id}><UserInfo>{user.name}</UserInfo> <UserInfo>{user.age} Anos</UserInfo><TrashCanButton onClick={() => {deleteUser(user.id)}}><TrashCanImg alt="trash-can" src={TrashCan}></TrashCanImg></TrashCanButton></UserBox>
           ))}
         </ul>
         <ButtonBack>Voltar<ArrowLImg alt="seta-para-esquerda" src={ArrowLeft}></ArrowLImg></ButtonBack>

@@ -83,10 +83,11 @@ export const Button = styled.button `
     border-radius: 25px;
     box-shadow: #00000050 0 4px 0;
     cursor: pointer;
-    transition: transform 0.1s ease-in-out,  background-color 0.2s ease-in-out;
+    transition: transform 0.1s ease-in-out, background-color 0.1s ease-in-out, border 0.1s ease-in-out;
 
     &:hover {
-        background-color: #FFFFFF40;
+        background: none;
+        border: solid 2px #fff;
     }
     &:active {
         transform: scale(0.9);
@@ -139,10 +140,10 @@ export const ButtonBack = styled.button `
     cursor: pointer;
     height: 50px;
     width: 200px;
-    transition: transform 0.1s ease-in-out, background-color 0.2s ease-in-out, border 0.2s ease-in-out;
+    transition: transform 0.1s ease-in-out, background-color 0.1s ease-in-out, border 0.1s ease-in-out;
 
     &:hover {
-        background-color: #000000;
+        background-color: #000000CC;
         border: none;
     }
     &:active {

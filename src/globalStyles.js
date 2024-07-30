@@ -9,13 +9,25 @@ export default createGlobalStyle `
         box-sizing: border-box;
     }
 
-    html {}
+    html {
+        height: 100%;
+        width: 100%;
+    }
     
     head {
         display: none;
     }
 
+    body {
+        height: auto;
+        width: 100%;
+    }
+
     script {
         display: none;
+    }
+
+    #root {
+        height: 100%;
     }
 `

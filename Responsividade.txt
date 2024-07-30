@@ -1,0 +1,47 @@
+IMAGEM
+
+margin: 30px;
+height: auto;
+width: 85vw;
+
+
+
+CONTENT BOX
+
+display: flex;
+flex-direction: column;
+flex-wrap: nowrap;
+justify-content: center;
+align-items: center;
+border-radius: 61px 61px 0 0;
+background: linear-gradient(157.44deg, rgba(255, 255, 255, 0.6) 0.85%, rgba(255, 255, 255, 0.15) 100%);
+padding: 35px;
+height: 63%;
+width: 100%;
+
+
+
+INPUT DIV
+
+width: 100%;
+
+
+
+USER BOX
+
+display: flex;
+font-size: 24px;
+font-weight: 400;
+border-radius: 10px;
+border: solid 2px #fff;
+background: none;
+color: #EAE7E9;
+box-shadow: #00000040 0 4px 0;
+margin-bottom: 20px;
+height: auto;
+width: 100%;
+flex-direction: row;
+justify-content: space-around;
+align-items: center;
+padding: 5%;
+gap: 10%;

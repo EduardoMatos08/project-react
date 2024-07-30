@@ -1,11 +1,13 @@
-import React, { Fragment } from 'react';
-import ReactDOM from 'react-dom/client';
-import App from './App';
-import GlobalStyle from './globalStyles'
+import React from 'react';
+import ReactDOM from 'react-dom';
+import GlobalStyle from './globalStyles';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-    <Fragment>
-        <App /> <GlobalStyle />
-    </Fragment>
+import Page from './routes';
+
+ReactDOM.render(
+    <>
+        <Page/>
+        <GlobalStyle />
+    </>,
+    document.getElementById("root")
 );
